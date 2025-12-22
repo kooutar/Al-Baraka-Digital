@@ -4,5 +4,5 @@ import com.kaoutar.AlBarakaDigital.model.Client;
 import com.kaoutar.AlBarakaDigital.model.Document;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ClientRespository extends JpaRepository<Long, Client> {
+public interface ClientRespository extends JpaRepository<Client, Long> {
 }
