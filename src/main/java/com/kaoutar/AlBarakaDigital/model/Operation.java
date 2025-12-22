@@ -4,10 +4,14 @@ import com.kaoutar.AlBarakaDigital.enums.OperationStatus;
 import com.kaoutar.AlBarakaDigital.enums.OperationType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "operations")
 public class Operation {
@@ -49,7 +53,6 @@ public class Operation {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_destination_id")
     private Account accountDestination;
-
 
 }
 

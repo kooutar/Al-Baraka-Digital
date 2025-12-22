@@ -3,10 +3,16 @@ package com.kaoutar.AlBarakaDigital.model;
 import com.kaoutar.AlBarakaDigital.enums.RoleUser;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 
 import java.time.LocalDateTime;
-
+@RequiredArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "users")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -41,4 +47,6 @@ public class User {
     protected LocalDateTime createdAt = LocalDateTime.now();
 
     protected LocalDateTime deletedAt;
+
+    protected String password;
 }

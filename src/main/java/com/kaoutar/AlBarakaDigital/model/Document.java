@@ -2,9 +2,13 @@ package com.kaoutar.AlBarakaDigital.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "documents")
 public class Document {
@@ -21,7 +25,6 @@ public class Document {
     @Column(nullable = false)
     private String fileType;
 
-
     @NotBlank(message = "Le chemin de stockage est obligatoire")
     @Column(nullable = false)
     private String storagePath;
@@ -29,7 +32,6 @@ public class Document {
     @PastOrPresent
     @Column(nullable = false, updatable = false)
     private LocalDateTime uploadedAt = LocalDateTime.now();
-
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)

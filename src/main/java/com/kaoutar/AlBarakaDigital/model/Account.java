@@ -2,12 +2,15 @@ package com.kaoutar.AlBarakaDigital.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name = "accounts")
 public class Account {
@@ -32,10 +35,8 @@ public class Account {
      */
     @NotNull(message = "Le propriétaire est obligatoire")
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner_id", nullable = false,unique = true)
+    @JoinColumn(name = "owner_id", nullable = false, unique = true)
     private Client owner;
-
-
 
     // DEPOT + RETRAIT
     @OneToMany(mappedBy = "account")
@@ -48,6 +49,5 @@ public class Account {
     // VIREMENTS entrants
     @OneToMany(mappedBy = "accountDestination")
     private List<Operation> incomingTransfers = new ArrayList<>();
-
 
 }
