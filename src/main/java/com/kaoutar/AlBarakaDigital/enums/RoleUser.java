@@ -1,7 +1,7 @@
 package com.kaoutar.AlBarakaDigital.enums;
 
 public enum RoleUser {
-    AGENT_BANCAIRE,
-    CLIENT,
-    Admin
+    ROLE_AGENTBANCAIRE,
+    ROLE_CLIENT,
+   ROLE_Admin
 }
