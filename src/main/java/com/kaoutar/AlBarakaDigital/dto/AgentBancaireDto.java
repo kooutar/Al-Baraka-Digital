@@ -1,4 +1,9 @@
 package com.kaoutar.AlBarakaDigital.dto;
 
-public class AgentBancaireDto  extends  UserDto{
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Data
+public class AgentBancaireDto extends UserDto {
 }

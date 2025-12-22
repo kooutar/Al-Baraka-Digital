@@ -1,8 +1,15 @@
 package com.kaoutar.AlBarakaDigital.dto;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+
+
+@NoArgsConstructor
+@Data
 public class OprerationDto {
     private Long id;
     private String type;   // DEPOT, RETRAIT, VIREMENT

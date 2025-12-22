@@ -3,7 +3,6 @@ package com.kaoutar.AlBarakaDigital.dto;
 import lombok.*;
 
 
-@RequiredArgsConstructor
 @NoArgsConstructor
 @Data
 public class UserDto {
