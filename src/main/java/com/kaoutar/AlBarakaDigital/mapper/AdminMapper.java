@@ -6,7 +6,7 @@ import com.kaoutar.AlBarakaDigital.model.Admin;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", imports = RoleUser.class)
 public interface AdminMapper {
 
     @Mapping(target = "role", expression = "java(admin.getRole().name())")
